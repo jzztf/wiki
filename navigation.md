@@ -14,6 +14,7 @@
 
   * [Blog](#!tools/blog.md)
   * [Git](#!tools/git.md)
+  * [Vim](#!tools/vim.md)
 
 [Life]()
 
