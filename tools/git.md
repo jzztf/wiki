@@ -1,5 +1,7 @@
 # git常用命令
 
+> **[git文档](https://git-scm.com/doc)**
+
 ## git install
 
 ```bash
@@ -32,27 +34,42 @@ git commit -m "update readme.md"
 ## ssh key
 
 ```bash
-$ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+$ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"  # github doc
+$ ssh-keygen -t rsa -C "your_email@example.com"  # coding
 ```
+
+选项：
+  - -b: 指定密钥长度
+  - -C: 添加注释
+  - -t: 指定要创建的秘钥类型 
 
 ##  github远程仓库
 
 ```bash
 $ git remote add origin git@git...
+# 添加远程仓库(origin),origin可以替换为其他名称命名远程仓库
 $ git remote list
+# 列出远程仓库
 $ git remote remove origin
+# 移除远程仓库(origin)
 $ git pull origin master
+# 拉取远程仓库(origin)的分支(master)到本地
 $ git push origin master
+# 将本地分支(master)推送到远程仓库(origin)
 $ git push origin branch
+# 将本地分支(branch)推送到远程仓库(origin)
 ```
 
 ## git 分支
 
 ```bash
 $ git checkout -b new_branch
-等同于
+# 创建分支(new_branch)，并检到该分支
+# 等同于
 $ git branch new_branch
+# 创建分支(new_branch)
 $ git checkout new_branch
+# 检出到分支(new_branch)
 ```
 ## 将本地仓库同步到两个远程仓库
 
@@ -61,7 +78,7 @@ $ git checkout new_branch
 - 在本地添加两个远程仓库
   - `git remote add coding git@...`
   - `git remote add github git@...`
-- 分别“pull“和”push“
+- 分别“pull“和”push“,github同coding
   - `git pull coding master`
   - `git push coding master`
 
