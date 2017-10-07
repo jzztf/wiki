@@ -8,11 +8,17 @@
 
 [Python]()
 
-  * [Python](#!python/python.md)
+  * # Python basic
+  * [Python语法](#!python/python.md)
+  - - - -
+  * # Python tools
+  * [virtualenv](#!python/virtualenv.md)
+  * [pip](#!python/pip.md) 
 
 [Tools]()
 
   * [Blog](#!tools/blog.md)
+  * [MDwiki](#!tools/blog/mdwiki.md)
   * [Git](#!tools/git.md)
   * [Vim](#!tools/vim.md)
 
@@ -24,4 +30,4 @@
 [Todo](todo.md)
 
 [gimmick:themechooser](Theme)
-[gimmick:theme](amelia)
+[gimmick:theme](readable)
