@@ -5,3 +5,5 @@
 - [ ] python
 - [ ] git
 - [ ] 阳志平文章笔记
+- [ ] docker
+- [ ] vagrant

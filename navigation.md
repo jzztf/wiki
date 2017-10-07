@@ -10,7 +10,7 @@
 
   * # Python basic
   * [Python语法](#!python/python.md)
-  - - - -
+  ----
   * # Python tools
   * [virtualenv](#!python/virtualenv.md)
   * [pip](#!python/pip.md) 
@@ -21,6 +21,15 @@
   * [MDwiki](#!tools/blog/mdwiki.md)
   * [Git](#!tools/git.md)
   * [Vim](#!tools/vim.md)
+  * [Docker](#!tools/docker.md)
+  * [Vagrant](#!tools/vagrant.md)
+  * [国内开源镜像站](#!tools/mirrors.md)
+
+[Others]()
+
+  * [Ruby](#!others/rubybasic.md)
+  * [Nodejs](#!others/nodejs.md)
+  * [匿名工具](#!others/anonymoustools.md)
 
 [Life]()
 
