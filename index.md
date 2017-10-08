@@ -5,18 +5,35 @@ Welcome
 ------
 Welcome to my mdwiki page!
 
+Contact
+------
+
+- Github: [jzztf](https://github.com/jzztf)
+- Email: [zhangtengfei@yandex.com]()
+
 Mdwiki
 ------
  
   - [MDwiki官网](http://dynalon.github.io/mdwiki/)
-  - [mdwiki notes](#!tools/blog/mdwikinotes.md)
+  - [mdwiki notes](#!tools/blog/mdwiki.md)
 
 Tools
 ------
  
-  - [My Blog](https://jzztf.coding.me)
-  - [markdown-syntax](https://markdown-syntax.com/)
-  - [git](#!tools/git.md)
+  * [Blog](#!tools/blog.md)
+  * [MDwiki](#!tools/blog/mdwiki.md)
+  * [Git](#!tools/git.md)
+  * [Vim](#!tools/vim.md)
+  * [Docker](#!tools/docker.md)
+  * [Vagrant](#!tools/vagrant.md)
+  * [国内开源镜像站](#!tools/mirrors.md)
+
+Others
+------
+
+  * [Ruby](#!others/rubybasic.md)
+  * [Nodejs](#!others/nodejs.md)
+  * [匿名工具](#!others/anonymoustools.md)
 
 Static Blog
 ------
