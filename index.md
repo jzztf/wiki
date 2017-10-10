@@ -16,6 +16,8 @@ Mdwiki
  
   - [MDwiki官网](http://dynalon.github.io/mdwiki/)
   - [mdwiki notes](#!tools/blog/mdwiki.md)
+  - [markdown-syntax](https://markdown-syntax.com/)
+  - [常用markdown](#!tools/markdown.md)
 
 Tools
 ------
@@ -115,15 +117,10 @@ Python Tools
 
 
 
+## File Index
 
+- [File Index](fileindex.md)
 
-
-
-
-
-
-
-
-  ---
+---
 
 <div align="right">**[↑ TOP](#Welcome)**</div>
