@@ -20,10 +20,13 @@ $ source ~/.bash_profile
 
 ```bash
 $ echo "ruby_url=https://cache.ruby-china.org/pub/ruby" > ~/.rvm/user/db
+或者
+$ gem sources --add https://gems.ruby-china.org/ --remove https://rubygems.org/
 $ gem sources -l
 *** CURRENT SOURCES ***
 
 https://gems.ruby-china.org/
+$ sudo gem update --system # 更新
 ```
 
 ## 安装ruby

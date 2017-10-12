@@ -43,6 +43,7 @@ Static Blog
   - [Hexo](#!tools/blog/hexo.md)
   - [Jekyll](#!tools/blog/jekyll.md)
   - [MDwiki](#!tools/blog/mdwiki.md)
+  - [Gollumwiki](#!tools/blog/gollumwiki.md)
 
 Linux Shell 脚本编程
 ------
@@ -108,7 +109,7 @@ Python Tools
 读书笔记
 ------
 
-  - []()
+  - [国庆七问--开智学堂](#!scripts/sevenissues.md)
 
 生活随想
 ------
