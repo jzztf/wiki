@@ -157,6 +157,90 @@ done
 
 ### 处理带值的选项
  
+`$ ./test.sh -a test -b -c test2`
+
+```bash
+#!/bin/bash
+echo
+while [ -n "$1" ]
+do
+    case "$1" in
+        -a) echo "Found -a";;
+        -b) param="$2"
+	    echo "Found -b, param: $2"
+	    shift;; # 因为while循环中只有一个shift，这里多加一个踢出参数
+	-c) echo "Found -c";;
+        --) shift
+            break;;
+        *) echo "$1 is not an option";;
+    esac
+    shift
+done
+```
+
+### getopt
+
+> getopt命令可以接受一系列任意形式的命令选项和参数，并将他们转成适当的格式。
+
+#### 命令行中使用getopt
+
+语法：
+
+- `getopt optstring parameter`
+
+实例：
+
+- `getopt ab:cd -a -b test -cd test2 test3`
+
+注意：
+
+- 在需要参数的选项后面添加冒号，以便于后面识别。在使用getopt时，可以将参数合在一块使用比如`-ab`
+- 如果命令中出现了‘optstring’中没有的选项则会报出错误，需要忽略错误的话可以使用`-q`选项，比如`getopt -q -ab test`
+
+#### 脚本中使用getopt
+
+> 主要在于使用`set`命令
+> `set`命令有一个双破折号选项会将命令行参数替换成`set`命令的命令行值，也就是一个替换的的功能，将shell中的命令行参数交给set命令双破折线之后的命令处理
+
+比如在脚本中使用：
+
+- `set -- $(getopt -q ab:cd "$@")`
+
+注意：
+
+- 仍然有一个问题，就是`getopt`无法处理一个带有空格的参数，下面需要使用高级一点的工具`getopts`
+
+### getopts
+
+> getopt将命令行上的选项和参数处理后只生成一个输出，而getopts命令一次只处理命令行上检测到的一个参数，处理完后返回状态码“0”.如果选项需要有个参数值可以加一个冒号，如果不希望有错误输出，可以再“optstring”之前添加冒号。
+
+> getopts命令会用到两个环境变量，如果一个选项需要参数值，`OPTARG`环境比那辆就会保存住那个值，`OPTIND`环境变量保存了参数列表中getopts正在处理的参数的位置，这样就能处理其他命令行参数了
+
+实例：
+
+```bash
+#!/bin/bash
+#
+echo
+while getopts :ab:cd opt
+do
+  case "$opt" in 
+    a) echo "Found -a";;
+    b) echo "Found -b, with value $OPTARG";;
+    c) echo "Found -c";;
+    *) echo "Unknown option: $opt";;
+  esac
+done
+```
+
+注意：
+
+- getopts命令解析命令行选项时会移除选项开头的单破折线，所以在case命令中不需要使用破折线。
+- getopts优点
+  - 参数值值中可以加空格
+  - 选项字母和参数放在一起使用
+  - 命令行中所有未定义的选项统一输出成问号
+- getopts命令在处理每个选项时，会将`OPTIND`环境变量值增一，在getopts完成处理选项时可以使用shift和`OPTIND`值来移动参数，要处理参数时，可以将前面处理的都移开再处理，使用`shift $[ $OPTARG - 1 ]`。
 
 ## 将选项标准化
 
@@ -182,6 +266,60 @@ done
 
 ## 获得用户输入
 
+### 基本读取
+
+> read命令从标准输入(键盘)或者一个文件描述符中获取输入，收到输入将其存入一个变量中
+
+- `-p`选项
+
+允许read命令指定提示符，比如`read ”Password： “ pass`
+
+- `-n`选项
+
+允许read命令不会在字符串末尾添加换行符使得用户紧跟其后输入数据
+
+### 超时
+
+> 添加`-t`选项设置read命令等待时间
+
+```bash
+#!/bin/bash
+
+if read -t 5 -p "Enter something: " message
+then
+        echo "this is $message"
+else
+        echo
+        echo "timeout!"
+fi
+```
+### 隐藏方式读取
+
+> 添加`-s`选项，显示器上看不到，实际上是颜色被设置成背景色一样的颜色了
+
+```bash
+#!/bin/bash
+
+read -s -p "Enter your password: " pass
+echo
+echo "Is your password really $pass?"
+```
+
+### 从文件读取
+
+> 可以使用read命令读取文件中的数据，可以使用cat命令,将结果通过管道直接传给含有read命令的while命令
+
+```bash
+#!/bin/bash
+
+count=1
+cat test | while read line  # 将每一行读取的内容赋值给line变量
+do
+   echo "Line $count: $line"
+   count=$[ $count + 1 ]
+done
+echo "Finished!!"
+```
 
 ---
 

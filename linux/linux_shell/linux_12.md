@@ -10,6 +10,7 @@
 if <command>
 then
     <commands>
+fi
 ```
 
 或者
@@ -17,6 +18,7 @@ then
 ```bash
 if <command>;then
     <commands>
+fi
 ```
 
 > "if"语句会运行"if"之后那个"command"，如果该命令退出出状态码为"0"，则位于"then"之后的"commands"命令会被执行
