@@ -38,5 +38,7 @@
 
 [Todo](todo.md)
 
+[Links](links.md)
+
 [gimmick:themechooser](Theme)
 [gimmick:theme](readable)

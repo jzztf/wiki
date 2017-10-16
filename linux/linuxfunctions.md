@@ -52,8 +52,7 @@ elif command
 then
     command
 fi
-```
-    
+``` 
 
 ### 判断
 
@@ -104,8 +103,8 @@ fi
 
 ### 复合条件测试
 
-- [ condition1 ] && [ condition2 ]
-- [ condition1 ] || [condition2]
+- `[ condition1 ] && [ condition2 ]`
+- `[ condition1 ] || [condition2]`
 
 ### if-then高级特性
 
@@ -141,6 +140,53 @@ esac  # case 翻过来
 
 ## for
 
+> 用于遍历列表
+
+### 语法：
+
+```bash
+for var in list
+do
+    command
+done
+```
+
+### 变体
+
+```bash
+for var in list; do command
+done
+```
+
 ## while
 
+> while命令看起来像是if-then和for的结合体，要进行条件测试，然后进行循环。
 
+语法：
+
+```bash
+while test command
+do
+    command
+done
+```
+中断循环
+
+- break命令
+
+> break命令直接退出循环
+
+- continue命令
+
+> continue命令暂时退出循环，一旦遇到合适的条件会继续下去
+
+
+参考：
+
+- [结构化命令](#!linux/linux_shell/linux_12.md)
+- [更多结构化命令](#!linux/linux_shell/linux_13.md)
+
+---
+
+
+<div align="right">**[↑ TOP](#if)**</div>
