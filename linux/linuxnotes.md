@@ -9,4 +9,5 @@
 
 ## linux一些小技巧
 
-- [linux小技巧](#!linux/linuxtmp.md) 
+- [创建临时文件&文件夹](#!linux/linuxtmp.md)
+- [创建linux硬链接](#!linux/linuxhardlink.md) 
