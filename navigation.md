@@ -28,6 +28,7 @@
 [Others]()
 
   * [CSS](#!others/cssbasic.md)
+  * [JavaScript](#!others/jsbasic.md)
   * [Ruby](#!others/rubybasic.md)
   * [Nodejs](#!others/nodejs.md)
   * [匿名工具](#!others/anonymoustools.md)
@@ -37,9 +38,7 @@
   * [读书笔记](#!life/notes.md)
   * [生活随想](#!life/diary.md)
 
-[Todo](todo.md)
 
 [Links](links.md)
 
-[gimmick:themechooser](Theme)
 [gimmick:theme](readable)
