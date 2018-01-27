@@ -86,3 +86,5 @@
 3. 简单设置【保留个人文件夹（yes/no）；选择驱动器（windows系统）】
 4. 等待。。。
 5. 系统进行了重置，安装的软件没有了
+
+> - [更新](https://github.com/jzztf/jzztf.github.io/wiki/useful-links)
