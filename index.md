@@ -3,25 +3,77 @@ ztf
 
 Welcome
 ------
+
 Welcome to my mdwiki page!
 
 Contact
 ------
 
-- Github: [jzztf](https://github.com/jzztf)
-- Email: [zhangtengfei@yandex.com]()
+- Github: [@jzztf](https://github.com/jzztf)
+- Email: <zhangtengfei@yandex.com>
+
+Linux
+------
+
+- linux-notes
+  - linux常用命令
+  - ​
+
+Python
+------
+
+- python-notes
+  - 数字
+  - 字符串
+  - 函数
+- ​
+
+Front-End
+------
+
+- HTML
+- CSS
+- JavaScript
+
+
+
+Others
+------
+
+
+Notes
+------
+
+> 未归类,笔记进行中...
+
+- ​
+
+Links
+------
+
+
+
+
+
+
+
+
+
+
+---
+
 
 Mdwiki
 ------
- 
-  - [MDwiki官网](http://dynalon.github.io/mdwiki/)
-  - [mdwiki notes](#!tools/blog/mdwiki.md)
-  - [markdown-syntax](https://markdown-syntax.com/)
-  - [常用markdown](#!tools/markdown.md)
+
+- [mdwiki](http://dynalon.github.io/mdwiki/)
+- [mdwiki-notes](#!tools/blog/mdwiki.md)
+- [markdown-syntax](https://markdown-syntax.com/)
+- [常用markdown](#!tools/markdown.md)
 
 Tools
 ------
- 
+
   * [Blog](#!tools/blog.md)
   * [MDwiki](#!tools/blog/mdwiki.md)
   * [Git](#!tools/git.md)
@@ -30,12 +82,6 @@ Tools
   * [Vagrant](#!tools/vagrant.md)
   * [国内开源镜像站](#!tools/mirrors.md)
 
-Others
-------
-
-  * [Ruby](#!others/rubybasic.md)
-  * [Nodejs](#!others/nodejs.md)
-  * [匿名工具](#!others/anonymoustools.md)
 
 Static Blog
 ------
@@ -44,6 +90,14 @@ Static Blog
   - [Jekyll](#!tools/blog/jekyll.md)
   - [MDwiki](#!tools/blog/mdwiki.md)
   - [Gollumwiki](#!tools/blog/gollumwiki.md)
+
+Others
+------
+
+  * [Ruby](#!others/rubybasic.md)
+  * [Nodejs](#!others/nodejs.md)
+  * [匿名工具](#!others/anonymoustools.md)
+
 
 Linux Shell 脚本编程
 ------
@@ -87,7 +141,7 @@ Linux Scripts
 
   - []()
 
- 
+
 Python Basic
   -------
 
