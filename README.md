@@ -42,7 +42,7 @@ $ ./sync.sh
    ├── nav-linux.md						# nav导航文件
    ├── nav-others.md
    ├── nav-python.md
-   ├── navigator.md						# 页面导航栏设置文件
+   ├── navigation.md						# 页面导航栏设置文件
    ├── others
    └── python								# 本着大道至简的原则,目录不超三级
        ├── py-basic						# 三级目录

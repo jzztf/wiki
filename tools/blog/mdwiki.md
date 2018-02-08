@@ -266,6 +266,10 @@ XML|xml
 </table>
 ```
 
+Q&A:
+
+- 代码高亮在使用到不支持的语言或填错时浏览器会崩溃
+
 参考：
 
 - [MDwiki 使用手册](http://www.grdtechs.com/mdwiki/#!index.md)
