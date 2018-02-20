@@ -8,8 +8,6 @@
 True
 ```
 
-
-
 - 用转义序列代表特殊字节
   - `\n`换行符
   - `\t`制表符
@@ -31,8 +29,6 @@ hello\n world
 hello
  world
 ```
-
-
 
 - 三重引号编写多行字符串
   - 多行字符串
@@ -59,8 +55,6 @@ hello
     'fedc'
     ```
 
-    ​
-
   - 为什么要在意: 切片
 
     - 切片有很多应用场景,比如程序参数检测
@@ -74,40 +68,115 @@ hello
   - 修改字符串
 
     - 字符串不可变性质,不能在原地进行修改,比如索引赋值就会引发错误
-
-    ```python
-    >>> str = 'hello world'
-    >>> str[0] = 'H'
-    Traceback (most recent call last):
-      File "<stdin>", line 1, in <module>
-    TypeError: 'str' object does not support item assignment
-    ```
-
-    ​
-
-  - 字符串方法
+    - 但是可以使用合并,切片赋值给新的字符串来修改
 
     ```python
     >>> s = "hello world"
-    >>> dir(s)
+    # 原地赋值会失败
+    >>> s[2] = 'L'
+    Traceback (most recent call last):
+      File "<stdin>", line 1, in <module>
+    TypeError: 'str' object does not support item assignment
+    # 切片合并重新赋值给新的变量是可以的
+    >>> s = s[:2] + 'L' + s[3:]
+    >>> s
+    'heLlo world'
+    # 也可以使用字符串方法实现
+    >>> s.replace('eL','el')
+    'hello world'
+    # 格式化方法修改字符串,实际是生成了新的字符串
+    >>> "hello %s"%('world!')
+    'hello world!'
+    >>> "hello {}".format('world!')
+    'hello world!'
     ```
 
-    ​
+  - 字符串方法
 
-  - 字符串方法实例: 修改字符串
+    - [http://www.runoob.com/python/python-strings.html](url)
 
-  - 字符串方法实例: 文本解析
+    ```python
+    >>> s = "hello world"
+    >>> dir(s) # 查看字符串方法
+    ```
 
   - 实际应用中的常见字符串方法
 
+  ```python
+  s.startswith()
+  s.endswith()
+  s.isalpha()
+  s.find()
+  s.lstrip()
+  s.rstrip()
+  s.strip()
+  s.center()
+  s.count()
+  ```
+
   - 字符串格式化表达式
+
+  ```python
+  >>> "hello %s"%('john')
+  "hello john"
+  ```
+
+  - 更高级的用法
+
+  ```python
+  # 字符串格式化代码
+  s => 字符串
+  d => 十进制数
+  i => 整数
+  o => 八进制数
+  x => 十六进制数
+  % => 常量
+  # 格式化可使浮点数的对齐和填充
+  ```
+
+  - 基于字典的格式化调用
+
+  ```python
+  >>> "hello {}".format("john")
+  "hello john"
+  >>> "hello {0}{1}".format("john","!")
+  "hello john!"
+  ```
+
+  ​
 
   - 字符串格式化调用方法
 
     - 基础知识
     - 添加键, 属性和偏移量
+
+    ```python
+    >>> "My {0} runs {1}".format('laptop','linux')
+    'My laptop runs linux'
+    >>> "My {0[1]} runs {1[sys]}".format(['laptop','PC'],{'sys':'linux',})
+    'My PC runs linux'
+    ```
+
+    ​
+
     - 添加具体格式
+
+    ```python
+    # 在十个字符范围内左对齐,右对齐
+    >>> '{0:10} = {1:>10}'.format('123','123')
+    '123        =        123'
+    >>> '{0:10} = {1:<10}'.format('123','123')
+    '123        = 123       '
+    ```
+
+    ​
+
     - 与%格式化表达式比较
     - 为什么用新的格式化方法
     - 同样分类的类型共享其操作集合
-    - 可变类型能够在远处修改
+    - 可变类型能够在原处修改
+
+- 习题
+
+  - python如何修改字符串
+    - 字符串无法修改,只能通过一定的方法重新赋值

@@ -4,6 +4,8 @@
 
 [Python](#!nav-python.md)
 
+[Front-end](#!nav-front-end.md)
+
 [Tools](#!nav-tools.md)
 
 [Others](#!nav-others.md)
