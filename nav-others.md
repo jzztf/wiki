@@ -1,3 +1,5 @@
-- [ruby-basic.md](#!others/ruby-basic.md)
-- [nodejs.md](#!others/nodejs.md)
-- [anonymous-tools.md](#!others/anonymous-tools.md)
+# Others
+
+- [anonymous-tools](#!others/anonymous-tools.md)
+- [nodejs](#!others/nodejs.md)
+- [ruby-basic](#!others/ruby-basic.md)
